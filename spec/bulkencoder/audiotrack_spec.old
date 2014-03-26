@@ -1,0 +1,47 @@
+require File.expand_path('../../spec_helper.rb', __FILE__)
+require 'bulkencoder'
+
+module BulkEncoder
+  describe AudioTrack do
+    subject do
+      AudioTrack.new input
+    end
+
+    describe '#new' do
+      let(:input) { '1, English (AC3) (5.1 ch) (iso639-2: eng), 48000Hz, 448000bps' }
+
+      it 'track should be parsed' do
+        subject.track.should == 1
+      end
+
+      it 'language should be parsed' do
+        subject.language.should == 'English'
+      end
+
+      it 'sample_rate should be parsed' do
+        subject.sample_rate.should == 48000
+      end
+
+      it 'bit_rate should be parsed' do
+        subject.bit_rate.should == 448000
+      end
+
+      it 'codec should be parsed' do
+        subject.codec.should == 'AC3'
+      end
+
+      it 'channels should be parsed' do
+        subject.channels.should == 5.1
+      end
+
+      it 'iso should be parsed' do
+        subject.iso.should == 'iso639-2'
+      end
+
+      it 'isolanguage should be parsed' do
+        subject.isolanguage.should == 'eng'
+      end
+
+    end
+  end
+end

@@ -20,10 +20,15 @@ integers = {
 }
 
 regexes = [
+    /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<title>.+)\) \((?<channels>[\.\d]+) ch\) \((?<subtitle>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+    /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<channels>[\.\d]+) ch\) \((?<title>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+    /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<title>.+)\) \((?<channels>[\.\d]+) ch\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
     /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<title>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
     /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
     /(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<title>.+)\) \((?<iso>.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?/
 ]
+
+codecs = {}
 
 test_cases.each do |key, value|
 
@@ -37,6 +42,7 @@ test_cases.each do |key, value|
     puts "        let(:input) { \"#{key}\" }"
 
     match.names.each do |match_name|
+      codecs[match[:codec]] = 1
       puts "        it '#{match_name} should be parsed' do"
       if integers.has_key?(match_name)
         if match[match_name] == nil
@@ -48,26 +54,24 @@ test_cases.each do |key, value|
         puts "          subject.#{match_name}.should == \"#{match[match_name]}\""
       end
       puts '        end'
+    end
 
-      #if match[:language] =~ /^(\S+)/i
-      #  puts "        it 'language should be #{$1}' do"
-      #  puts "          subject.language.should == '#{$1}'"
-      #  puts "        end"
-      #end
-      #
-      #if key =~ /(AC3|DTS-ES|DTS)/i
-      #  puts "        it 'codec should be #{$1}' do"
-      #  puts "          subject.codec.should == '#{$1}'"
-      #  puts "        end"
-      #end
-      #
-      #if key =~ /Director's Commentary 1/i
-      #  puts "        it 'title should be Director''s Commentary 1' do"
-      #  puts "          subject.title.should == 'Director''s Commentary 1'"
-      #  puts "        end"
-      #end
+    if match[:language] =~ /^(\S+)/i
+      puts "        it 'language should be #{$1}' do"
+      puts "          subject.language.should == '#{$1}'"
+      puts "        end"
+    end
 
+    if key =~ /(AC3|DTS-ES|DTS)/i
+      puts "        it 'codec should be #{$1}' do"
+      puts "          subject.codec.should == '#{$1}'"
+      puts "        end"
+    end
 
+    if key =~ /Director's Commentary 1/i
+      puts "        it 'title should be Director''s Commentary 1' do"
+      puts "          subject.title.should == \"Director's Commentary 1\""
+      puts "        end"
     end
     index +=1
     puts '      end'
@@ -85,3 +89,5 @@ end
 puts '    end'
 puts '  end'
 puts 'end'
+
+puts "##{codecs}"

@@ -10,6 +10,7 @@ module BulkEncoder
     attr_reader :bit_rate
     attr_reader :codec
     attr_reader :title
+    attr_reader :subtitle
     attr_reader :iso
     attr_reader :isolanguage
     attr_reader :channels
@@ -26,6 +27,9 @@ module BulkEncoder
       end
 
       regexes = [
+          /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<title>.+)\) \((?<channels>[\.\d]+) ch\) \((?<subtitle>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+          /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<channels>[\.\d]+) ch\) \((?<title>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+          /^(?<track>\d+), (?<language>\S+) \((?<codec>[^\(\)]+)\) \((?<title>.+)\) \((?<channels>[\.\d]+) ch\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
           /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<title>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
           /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
           /(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<title>.+)\) \((?<iso>.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?/
@@ -40,6 +44,7 @@ module BulkEncoder
         @language = match[:language]
         @codec = match[:codec]
         @title = match[:title] if match.names.include?('title')
+        @subtitle = match[:subtitle] if match.names.include?('subtitle')
         @iso = match[:iso]
         @isolanguage = match[:isolanguage]
         @sample_rate = match[:sample_rate].to_i unless match[:sample_rate].nil?
@@ -51,6 +56,12 @@ module BulkEncoder
       raise ArgumentError, "Could not parse #{input}"
     end
 
+    def self.codec_value(codec)
+      case codec
+        when ''
+      end
+    end
+
     def <=>(another_track)
       return -1 unless another_track.is_a?(AudioTrack)
 
@@ -58,6 +69,10 @@ module BulkEncoder
 
       result += (self.sample_rate - another_track.sample_rate) * 1
       result += (self.bit_rate - another_track.bit_rate) * 10
+
+      unless self.channels.nil?||another_track.channels.nil?
+        result += (self.channels - another_track.channels) * 100
+      end
 
       return result
     end

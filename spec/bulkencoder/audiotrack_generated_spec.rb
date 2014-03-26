@@ -19,8 +19,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -46,8 +46,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS-ES"
         end
-        it 'title should be parsed' do
-          subject.title.should == "6.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 6.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -68,10 +68,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -95,10 +98,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -127,8 +133,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -149,10 +155,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -181,8 +190,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -208,8 +217,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "LPCM"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -235,8 +244,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -262,8 +271,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -289,8 +298,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -311,10 +320,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "Francais (AC3)"
+          subject.language.should == "Francais"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -343,8 +355,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -365,10 +377,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -392,10 +407,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -424,8 +442,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -446,10 +464,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -473,10 +494,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -505,8 +529,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -532,8 +556,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -559,8 +583,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -586,8 +610,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -613,8 +637,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -640,8 +664,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -667,8 +691,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -694,8 +718,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -721,8 +745,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -743,10 +767,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -770,10 +797,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "Francais (AC3)"
+          subject.language.should == "Francais"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -797,10 +827,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -829,8 +862,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -856,8 +889,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -883,8 +916,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -910,8 +943,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -937,8 +970,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -959,10 +992,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "Espanol (AC3)"
+          subject.language.should == "Espanol"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -986,10 +1022,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1018,8 +1057,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1045,8 +1084,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1072,8 +1111,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1099,8 +1138,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1126,8 +1165,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1148,10 +1187,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Espanol (AC3)"
+          subject.language.should == "Espanol"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1180,8 +1222,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "3.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 3.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1207,8 +1249,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1234,8 +1276,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1261,8 +1303,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1288,8 +1330,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS-ES"
         end
-        it 'title should be parsed' do
-          subject.title.should == "6.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 6.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1315,8 +1357,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1342,8 +1384,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1369,8 +1411,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1396,8 +1438,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1418,10 +1460,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Visually Impaired)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Visually Impaired"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1450,8 +1495,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1477,8 +1522,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1499,10 +1544,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "Unknown (AC3)"
+          subject.language.should == "Unknown"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1531,8 +1579,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1553,10 +1601,13 @@ module BulkEncoder
           subject.track.should == 6
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1580,10 +1631,13 @@ module BulkEncoder
           subject.track.should == 7
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1612,8 +1666,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1639,8 +1693,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1661,10 +1715,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "Espanol (AC3)"
+          subject.language.should == "Espanol"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1688,10 +1745,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1720,8 +1780,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1747,8 +1807,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1769,10 +1829,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Francais (AC3)"
+          subject.language.should == "Francais"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -1801,8 +1864,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "4.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 4.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1828,8 +1891,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1855,8 +1918,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1882,8 +1945,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1909,8 +1972,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1936,8 +1999,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1963,8 +2026,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -1990,8 +2053,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2017,8 +2080,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2044,8 +2107,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2071,8 +2134,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2098,8 +2161,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2120,10 +2183,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2152,8 +2218,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2174,10 +2240,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2206,8 +2275,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2233,8 +2302,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2255,10 +2324,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "Espanol (AC3)"
+          subject.language.should == "Espanol"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2287,8 +2359,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2314,8 +2386,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2336,10 +2408,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2368,8 +2443,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2395,8 +2470,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2422,8 +2497,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2449,8 +2524,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2476,8 +2551,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2503,8 +2578,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2530,8 +2605,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2557,8 +2632,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2584,8 +2659,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2611,8 +2686,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2638,8 +2713,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS-ES"
         end
-        it 'title should be parsed' do
-          subject.title.should == "6.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 6.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2665,8 +2740,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2692,8 +2767,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2719,8 +2794,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2746,8 +2821,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2768,10 +2843,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2795,10 +2873,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2827,8 +2908,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2854,8 +2935,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2876,10 +2957,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Unknown (AC3)"
+          subject.language.should == "Unknown"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2908,8 +2992,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2935,8 +3019,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "4.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 4.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -2957,10 +3041,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "Francais (AC3)"
+          subject.language.should == "Francais"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -2989,8 +3076,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3011,10 +3098,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3038,10 +3128,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "Unknown (AC3)"
+          subject.language.should == "Unknown"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3070,8 +3163,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3097,8 +3190,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "4.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 4.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3119,10 +3212,13 @@ module BulkEncoder
           subject.track.should == 6
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3151,8 +3247,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3178,8 +3274,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3205,8 +3301,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3232,8 +3328,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Visually Impaired"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3254,10 +3350,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3281,10 +3380,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "Unknown (AC3)"
+          subject.language.should == "Unknown"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3308,10 +3410,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3340,8 +3445,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3367,8 +3472,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3394,8 +3499,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3421,8 +3526,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3448,8 +3553,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3475,8 +3580,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3502,8 +3607,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3529,8 +3634,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3556,8 +3661,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "LPCM"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3583,8 +3688,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3610,8 +3715,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3637,8 +3742,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3664,8 +3769,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3691,8 +3796,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3718,8 +3823,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3745,8 +3850,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3767,10 +3872,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.1 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.1
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3799,8 +3907,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3821,10 +3929,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Japanese (AC3)"
+          subject.language.should == "Japanese"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3848,10 +3959,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "Japanese (AC3)"
+          subject.language.should == "Japanese"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -3880,8 +3994,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "3.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 3.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3907,8 +4021,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3934,8 +4048,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3961,8 +4075,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -3988,8 +4102,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4015,8 +4129,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4042,8 +4156,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4069,8 +4183,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4096,8 +4210,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4123,8 +4237,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4150,8 +4264,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4177,8 +4291,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4204,8 +4318,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4231,8 +4345,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4258,8 +4372,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4285,8 +4399,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4312,8 +4426,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4334,10 +4448,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4366,8 +4483,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4393,8 +4510,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4420,8 +4537,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4447,8 +4564,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4474,8 +4591,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4501,8 +4618,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4528,8 +4645,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4555,8 +4672,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4582,8 +4699,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4609,8 +4726,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4636,8 +4753,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4663,8 +4780,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Visually Impaired"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4690,8 +4807,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4712,10 +4829,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4739,10 +4859,13 @@ module BulkEncoder
           subject.track.should == 6
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4771,8 +4894,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4793,10 +4916,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "Japanese (AC3)"
+          subject.language.should == "Japanese"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4825,8 +4951,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4852,8 +4978,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "3.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 3.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4879,8 +5005,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4901,10 +5027,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "Japanese (AC3)"
+          subject.language.should == "Japanese"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4928,10 +5057,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -4960,8 +5092,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -4987,8 +5119,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5014,8 +5146,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5041,8 +5173,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5068,8 +5200,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5090,10 +5222,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5117,10 +5252,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "Francais (AC3)"
+          subject.language.should == "Francais"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5144,10 +5282,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "Espanol (AC3)"
+          subject.language.should == "Espanol"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5171,10 +5312,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Portugues (AC3)"
+          subject.language.should == "Portugues"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5203,8 +5347,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5230,8 +5374,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5257,8 +5401,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5279,10 +5423,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "Portugues (AC3)"
+          subject.language.should == "Portugues"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5311,8 +5458,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5338,8 +5485,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5365,8 +5512,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Visually Impaired"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5392,8 +5539,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5419,8 +5566,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5446,8 +5593,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5473,8 +5620,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5500,8 +5647,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5527,8 +5674,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5554,8 +5701,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5581,8 +5728,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5608,8 +5755,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5635,8 +5782,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Visually Impaired"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5662,8 +5809,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5689,8 +5836,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5716,8 +5863,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5743,8 +5890,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5770,8 +5917,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5797,8 +5944,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5819,10 +5966,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5851,8 +6001,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5873,10 +6023,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5900,10 +6053,13 @@ module BulkEncoder
           subject.track.should == 5
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 2)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 2"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5932,8 +6088,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -5954,10 +6110,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -5986,8 +6145,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6013,8 +6172,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 1"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6035,10 +6194,13 @@ module BulkEncoder
           subject.track.should == 1
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -6067,8 +6229,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6094,8 +6256,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6121,8 +6283,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "DTS"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6143,10 +6305,13 @@ module BulkEncoder
           subject.track.should == 2
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -6175,8 +6340,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6202,8 +6367,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6229,8 +6394,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6256,8 +6421,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6283,8 +6448,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6310,8 +6475,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6337,8 +6502,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6359,10 +6524,13 @@ module BulkEncoder
           subject.track.should == 4
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3)"
+          subject.language.should == "English"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "AC3"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -6391,8 +6559,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "Director's Commentary 2"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6418,8 +6586,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6445,8 +6613,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "2.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6472,8 +6640,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "5.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 5.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6494,10 +6662,13 @@ module BulkEncoder
           subject.track.should == 3
         end
         it 'language should be parsed' do
-          subject.language.should == "English (AC3) (Director's Commentary 1)"
+          subject.language.should == "English (AC3)"
         end
         it 'codec should be parsed' do
-          subject.codec.should == "2.0 ch"
+          subject.codec.should == "Director's Commentary 1"
+        end
+        it 'channels should be parsed' do
+          subject.channels.should == 2.0
         end
         it 'title should be parsed' do
           subject.title.should == "Dolby Surround"
@@ -6526,8 +6697,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "1.0 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 1.0
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"
@@ -6553,8 +6724,8 @@ module BulkEncoder
         it 'codec should be parsed' do
           subject.codec.should == "AC3"
         end
-        it 'title should be parsed' do
-          subject.title.should == "4.1 ch"
+        it 'channels should be parsed' do
+          subject.channels.should == 4.1
         end
         it 'iso should be parsed' do
           subject.iso.should == "iso639-2"

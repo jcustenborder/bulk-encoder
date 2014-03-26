@@ -15,17 +15,27 @@ index = 1
 integers = {
     'track' => true,
     'sample_rate' => true,
-    'bit_rate' => true
+    'bit_rate' => true,
+    'channels' => true
 }
+
+regexes = [
+    /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<title>.+)\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+    /^(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<channels>.+) ch\) \((?<iso>iso.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?$/,
+    /(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<title>.+)\) \((?<iso>.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?/
+]
 
 test_cases.each do |key, value|
 
-  match = /(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<title>.+)\) \((?<iso>.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?/.match(key)
+  matched = false
 
-  puts "      describe 'Test Case #{index}' do"
-  puts "        let(:input) { \"#{key}\" }"
+  regexes.each do |regex|
+    match = regex.match(key)
+    next unless match
+    matched = true
+    puts "      describe 'Test Case #{index}' do"
+    puts "        let(:input) { \"#{key}\" }"
 
-  if match
     match.names.each do |match_name|
       puts "        it '#{match_name} should be parsed' do"
       if integers.has_key?(match_name)
@@ -39,14 +49,35 @@ test_cases.each do |key, value|
       end
       puts '        end'
 
+      #if match[:language] =~ /^(\S+)/i
+      #  puts "        it 'language should be #{$1}' do"
+      #  puts "          subject.language.should == '#{$1}'"
+      #  puts "        end"
+      #end
+      #
+      #if key =~ /(AC3|DTS-ES|DTS)/i
+      #  puts "        it 'codec should be #{$1}' do"
+      #  puts "          subject.codec.should == '#{$1}'"
+      #  puts "        end"
+      #end
+      #
+      #if key =~ /Director's Commentary 1/i
+      #  puts "        it 'title should be Director''s Commentary 1' do"
+      #  puts "          subject.title.should == 'Director''s Commentary 1'"
+      #  puts "        end"
+      #end
+
+
     end
+    index +=1
+    puts '      end'
+    break
   end
-  index +=1
-  puts '      end'
 
-
-
-
+  unless matched
+    puts "# No Match"
+    puts "# #{key}"
+  end
 
 
 end

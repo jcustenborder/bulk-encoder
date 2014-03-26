@@ -15,10 +15,9 @@ module BulkEncoder
           other = AudioTrack.new "2, English (DTS-ES) (6.1 ch) (iso639-2: eng), 48000Hz, 768000bps"
 
           expect(subject).to be < other
+          expect(other).to be > subject
         end
-
       end
-
     end
   end
 end

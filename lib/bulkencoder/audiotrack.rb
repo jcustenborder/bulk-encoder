@@ -3,14 +3,15 @@ require 'tree'
 
 module BulkEncoder
   class AudioTrack
-    attr_accessor :track
-    attr_accessor :language
-    attr_accessor :sample_rate
-    attr_accessor :bit_rate
-    attr_accessor :codec
-    attr_accessor :title
-    attr_accessor :iso
-    attr_accessor :isolanguage
+    include Comparable
+    attr_reader :track
+    attr_reader :language
+    attr_reader :sample_rate
+    attr_reader :bit_rate
+    attr_reader :codec
+    attr_reader :title
+    attr_reader :iso
+    attr_reader :isolanguage
 
     def initialize(s)
       input = nil
@@ -25,19 +26,29 @@ module BulkEncoder
 
       match = /(?<track>\d+), (?<language>.*) \((?<codec>.*)\) \((?<title>.+)\) \((?<iso>.*): (?<isolanguage>.*)\)(, (?<sample_rate>\d+)Hz, (?<bit_rate>\d+)bps)?/.match(input)
 
-      if match
-        self.track = match[:track].to_i
-        self.language = match[:language]
-        self.codec = match[:codec]
-        self.title = match[:title]
-        self.iso = match[:iso]
-        self.isolanguage = match[:isolanguage]
-        self.sample_rate = match[:sample_rate].to_i unless match[:sample_rate].nil?
-        self.bit_rate = match[:bit_rate].to_i unless match[:bit_rate].nil?
-      else
-        raise ArgumentError, "Could not parse #{parts[1]}"
+      unless match
+        raise ArgumentError, "Could not parse #{input}"
       end
 
+      @track = match[:track].to_i
+      @language = match[:language]
+      @codec = match[:codec]
+      @title = match[:title]
+      @iso = match[:iso]
+      @isolanguage = match[:isolanguage]
+      @sample_rate = match[:sample_rate].to_i unless match[:sample_rate].nil?
+      @bit_rate = match[:bit_rate].to_i unless match[:bit_rate].nil?
+    end
+
+    def <=>(another_track)
+      return -1 unless another_track.is_a?(AudioTrack)
+
+      result = 0
+
+      result += (self.sample_rate - another_track.sample_rate * 10)
+      result += (self.bit_rate - another_track.bit_rate * 100)
+
+      return result
     end
   end
 end

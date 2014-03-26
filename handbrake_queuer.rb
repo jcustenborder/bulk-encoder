@@ -1,5 +1,10 @@
 require 'handbrake'
 require 'trollop'
+require 'log4r'
+
+log = Log4r::Logger.new File.basename(__FILE__, '.rb')
+log.outputters = Log4r::Outputter.stdout
+
 opts = Trollop::options do
   opt :input_path, "Input Path", :type => :string, :required => true
   opt :handbrake_path, 'Path to the handbrake executable', :type => :string, :default => 'HandBrakeCLI'
@@ -16,6 +21,8 @@ directories = Dir[search_path]
 example_tracks = {}
 
 directories.each do |movie_path|
+  log.info "processing #{movie_path}"
+
   project = handbrake.input(movie_path)
   disc = project.scan
 

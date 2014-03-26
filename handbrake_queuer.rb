@@ -23,8 +23,15 @@ example_tracks = {}
 directories.each do |movie_path|
   log.info "processing #{movie_path}"
 
+
   project = handbrake.input(movie_path)
-  disc = project.scan
+  disc = nil
+  begin
+    disc = project.scan
+  rescue
+    log.error "Exception scanning #{movie_path}"
+    next
+  end
 
   disc.titles.each do |title_number, title|
     #if title.main_feature?

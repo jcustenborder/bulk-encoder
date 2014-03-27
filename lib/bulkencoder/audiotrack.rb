@@ -56,11 +56,10 @@ module BulkEncoder
       raise ArgumentError, "Could not parse #{input}"
     end
 
-    def self.codec_value(codec)
-      case codec
-        when ''
-      end
-    end
+
+
+
+
 
     def <=>(another_track)
       return -1 unless another_track.is_a?(AudioTrack)
@@ -69,6 +68,8 @@ module BulkEncoder
 
       result += (self.sample_rate - another_track.sample_rate) * 1
       result += (self.bit_rate - another_track.bit_rate) * 10
+      result += (AudioTrack.codec_value(self.codec) - AudioTrack.codec_value(another_track.codec)) * 1000
+      result += (AudioTrack.language_value(self.language) - AudioTrack.language_value(another_track.language)) * 10000
 
       unless self.channels.nil?||another_track.channels.nil?
         result += (self.channels - another_track.channels) * 100
@@ -76,5 +77,29 @@ module BulkEncoder
 
       return result
     end
+
+    :private
+    def self.codec_value(codec)
+      case codec
+        when 'DTS-ES'
+          return 3
+        when 'DTS'
+          return 2
+        when 'AC3'
+          return 1
+        else
+          return -1
+      end
+    end
+
+    def self.language_value(language)
+      case language
+        when 'English'
+          return 1
+        else
+          return -1
+      end
+    end
+
   end
 end

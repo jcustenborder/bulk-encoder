@@ -29,7 +29,7 @@ regexes = [
 ]
 
 codecs = {}
-
+languages = {}
 test_cases.each do |key, value|
 
   matched = false
@@ -43,6 +43,7 @@ test_cases.each do |key, value|
 
     match.names.each do |match_name|
       codecs[match[:codec]] = 1
+      languages[match[:language]] = 1
       puts "        it '#{match_name} should be parsed' do"
       if integers.has_key?(match_name)
         if match[match_name] == nil
@@ -91,3 +92,4 @@ puts '  end'
 puts 'end'
 
 puts "##{codecs}"
+puts "##{languages}"
